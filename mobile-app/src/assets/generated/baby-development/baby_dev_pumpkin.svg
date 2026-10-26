@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="720" viewBox="0 0 720 720" role="img" aria-label="pumpkin baby development illustration">
+  <rect width="720" height="720" rx="72" fill="#FFF6EA"/>
+  <circle cx="116" cy="124" r="72" fill="#FFFFFF" opacity="0.58"/>
+  <circle cx="604" cy="164" r="92" fill="#D7F3EC" opacity="0.45"/>
+  <circle cx="592" cy="588" r="98" fill="#FFFFFF" opacity="0.48"/>
+  <circle cx="360" cy="360" r="206" fill="#FFFFFF" opacity="0.54"/>
+  <path d="M360 198 C484 198, 560 282, 536 396 C514 502, 430 556, 360 536 C290 556, 206 502, 184 396 C160 282, 236 198, 360 198Z" fill="#F2A34A"/>
+  <path d="M360 212 C410 272, 414 458, 360 536 C306 458, 310 272, 360 212Z" fill="#F8BC63"/>
+  <path d="M360 198 C358 162, 378 144, 412 136" fill="none" stroke="#57A773" stroke-width="22" stroke-linecap="round"/>
+</svg>

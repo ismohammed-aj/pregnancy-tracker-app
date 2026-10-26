@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="Activity maternity article thumbnail">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#CFEFE7"/>
+      <stop offset="1" stop-color="#FBEAF2"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="440" rx="48" fill="url(#bg)"/>
+  <circle cx="620" cy="86" r="74" fill="#ffffff" opacity="0.45"/>
+  <circle cx="112" cy="346" r="86" fill="#ffffff" opacity="0.35"/>
+  <circle cx="360" cy="220" r="112" fill="#ffffff" opacity="0.72"/>
+  <path d="M376,126C397,126 414,143 414,164C414,185 397,202 376,202C355,202 338,185 338,164C338,143 355,126 376,126 M344,220L304,300L366,334L406,248L474,292 M330,334L270,398 M386,344L440,398" fill="none" stroke="#D6336C" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M246 312 C302 350 418 350 474 312" fill="none" stroke="#ffffff" stroke-width="18" stroke-linecap="round" opacity="0.78"/>
+</svg>

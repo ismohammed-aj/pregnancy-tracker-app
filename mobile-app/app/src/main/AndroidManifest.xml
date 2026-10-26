@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/Theme.MamaCarePlus">
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".ui.onboarding.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.onboarding.InteractiveWelcomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.profile.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.questionnaire.QuestionnaireActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.article.ArticlesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.article.ArticleDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.appointment.AppointmentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.pregnancy.PregnancyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.HomeActivity"
+            android:exported="false" />
+        <activity android:name=".ui.weight.WeightActivity"
+            android:exported="false" />
+        <activity android:name=".ui.community.CommunityActivity" />
+        <activity
+            android:name=".ui.auth.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.auth.ResetPasswordScreen"
+            android:exported="false" />
+        <activity
+            android:name=".ui.auth.VerifyResetCodeScreen"
+            android:exported="false" />
+        <activity
+            android:name=".ui.auth.ForgotPasswordEmailScreen"
+            android:exported="false" />
+        <activity
+            android:name=".ui.auth.LoginActivity"
+            android:exported="false" />
+        <activity android:name=".ui.tasks.TasksActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <receiver
+            android:name=".notification.MedicationReminderReceiver"
+            android:exported="false" />
+        <receiver
+            android:name=".notification.BootCompletedReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

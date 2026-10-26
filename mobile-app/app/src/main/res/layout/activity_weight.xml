@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:id="@+id/weightContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="18dp"
+        android:paddingTop="24dp"
+        android:paddingEnd="18dp"
+        android:paddingBottom="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card_rounded"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/tvWeightTitle"
+                style="@style/TextAppearance.MamaCarePlus.Display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Suivi du poids" />
+
+            <TextView
+                android:id="@+id/tvWeightMessage"
+                style="@style/TextAppearance.MamaCarePlus.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Vos mesures apparaissent ici chaque semaine." />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/weightSummaryRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="76dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_health_card_mint"
+                android:orientation="vertical"
+                android:padding="11dp">
+
+                <TextView
+                    android:id="@+id/tvLatestWeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0 kg"
+                    android:textColor="#2D1B24"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Dernier poids"
+                    android:textColor="#7A5C69"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="76dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_health_card_lavender"
+                android:orientation="vertical"
+                android:padding="11dp">
+
+                <TextView
+                    android:id="@+id/tvWeightDelta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0 kg"
+                    android:textColor="#2D1B24"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                android:text="Évolution"
+                    android:textColor="#7A5C69"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="76dp"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_health_card_pink"
+                android:orientation="vertical"
+                android:padding="11dp">
+
+                <TextView
+                    android:id="@+id/tvWeightWeeks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#2D1B24"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Semaines"
+                    android:textColor="#7A5C69"
+                    android:textSize="11sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_card_rounded"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                style="@style/TextAppearance.MamaCarePlus.SectionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nouvelle mesure" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilWeightKg"
+                style="@style/Widget.MamaCarePlus.TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:hint="Poids en kg">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etWeightKg"
+                    style="@style/Widget.MamaCarePlus.TextInputEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilBmi"
+                style="@style/Widget.MamaCarePlus.TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="IMC optionnel">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etBmi"
+                    style="@style/Widget.MamaCarePlus.TextInputEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilRecordDate"
+                style="@style/Widget.MamaCarePlus.TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Date exemple : 2026-05-20">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etRecordDate"
+                    style="@style/Widget.MamaCarePlus.TextInputEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="date"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilWeightNotes"
+                style="@style/Widget.MamaCarePlus.TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Notes optionnelles">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etWeightNotes"
+                    style="@style/Widget.MamaCarePlus.TextInputEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAddWeight"
+                style="@style/Widget.MamaCarePlus.Button.Primary"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="12dp"
+                android:minWidth="0dp"
+                android:minHeight="38dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textSize="12sp"
+                app:icon="@drawable/ic_weight_24"
+                app:iconGravity="textStart"
+                app:iconPadding="6dp"
+                app:iconSize="17dp"
+                app:cornerRadius="12dp"
+                android:text="Ajouter le poids" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvWeightChartTitle"
+            style="@style/TextAppearance.MamaCarePlus.SectionTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Évolution hebdomadaire" />
+
+        <LinearLayout
+            android:id="@+id/weightChartContainer"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_card_rounded"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:padding="16dp" />
+
+        <TextView
+            style="@style/TextAppearance.MamaCarePlus.SectionTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Historique du poids" />
+
+        <LinearLayout
+            android:id="@+id/listWeightRecords"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical" />
+
+    </LinearLayout>
+</ScrollView>

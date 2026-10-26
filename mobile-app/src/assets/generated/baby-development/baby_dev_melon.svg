@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="720" viewBox="0 0 720 720" role="img" aria-label="melon baby development illustration">
+  <rect width="720" height="720" rx="72" fill="#F4FBF9"/>
+  <circle cx="116" cy="124" r="72" fill="#FFFFFF" opacity="0.58"/>
+  <circle cx="604" cy="164" r="92" fill="#E7D7F5" opacity="0.45"/>
+  <circle cx="592" cy="588" r="98" fill="#FFFFFF" opacity="0.48"/>
+  <circle cx="360" cy="360" r="206" fill="#FFFFFF" opacity="0.54"/>
+  <ellipse cx="360" cy="360" rx="166" ry="132" fill="#54C8B6"/>
+  <ellipse cx="360" cy="360" rx="116" ry="98" fill="#E5FFF5" opacity="0.9"/>
+  <path d="M250 360 H470 M300 270 C330 338, 330 382, 300 450 M420 270 C390 338, 390 382, 420 450" stroke="#ffffff" stroke-width="16" stroke-linecap="round" opacity="0.8"/>
+</svg>

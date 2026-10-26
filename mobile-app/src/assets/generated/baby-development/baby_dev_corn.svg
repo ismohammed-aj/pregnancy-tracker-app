@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="720" viewBox="0 0 720 720" role="img" aria-label="corn baby development illustration">
+  <rect width="720" height="720" rx="72" fill="#FFF8E7"/>
+  <circle cx="116" cy="124" r="72" fill="#FFFFFF" opacity="0.58"/>
+  <circle cx="604" cy="164" r="92" fill="#DFF5E8" opacity="0.45"/>
+  <circle cx="592" cy="588" r="98" fill="#FFFFFF" opacity="0.48"/>
+  <circle cx="360" cy="360" r="206" fill="#FFFFFF" opacity="0.54"/>
+  <path d="M354 124 C448 174, 482 306, 428 456 C396 546, 310 548, 274 458 C218 316, 258 178, 354 124Z" fill="#F2B84B"/>
+  <path d="M270 434 C220 350, 232 260, 286 202 C278 312, 300 408, 360 520 C326 506, 294 474, 270 434Z" fill="#65C9A8"/>
+  <path d="M448 434 C500 350, 488 260, 434 202 C442 312, 420 408, 360 520 C394 506, 424 474, 448 434Z" fill="#65C9A8"/>
+  <path d="M326 214 L408 478 M390 214 L310 478 M282 300 H440 M284 380 H436" stroke="#FFF3B0" stroke-width="18" stroke-linecap="round"/>
+</svg>

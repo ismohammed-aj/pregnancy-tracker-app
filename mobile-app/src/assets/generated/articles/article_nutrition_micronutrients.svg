@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="Nutrition maternity article thumbnail">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFF8F1"/>
+      <stop offset="1" stop-color="#EAD7F5"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="440" rx="48" fill="url(#bg)"/>
+  <circle cx="620" cy="86" r="74" fill="#ffffff" opacity="0.45"/>
+  <circle cx="112" cy="346" r="86" fill="#ffffff" opacity="0.35"/>
+  <circle cx="360" cy="220" r="112" fill="#ffffff" opacity="0.72"/>
+  <path d="M305,252C382,226 431,161 445,87C363,97 303,139 274,204C302,206 323,221 338,252 M287,278C324,221 368,180 425,136" fill="none" stroke="#D6336C" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M246 312 C302 350 418 350 474 312" fill="none" stroke="#ffffff" stroke-width="18" stroke-linecap="round" opacity="0.78"/>
+</svg>

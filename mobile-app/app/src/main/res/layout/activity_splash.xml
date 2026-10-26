@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_onboarding_gradient"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <View
+        android:layout_width="210dp"
+        android:layout_height="210dp"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="-54dp"
+        android:layout_marginEnd="-56dp"
+        android:alpha="0.56"
+        android:background="@drawable/bg_onboarding_orb_mint" />
+
+    <View
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_gravity="bottom|start"
+        android:layout_marginStart="-42dp"
+        android:layout_marginBottom="78dp"
+        android:alpha="0.64"
+        android:background="@drawable/bg_onboarding_orb_pink" />
+
+    <LinearLayout
+        android:id="@+id/splashContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingStart="28dp"
+        android:paddingEnd="28dp">
+
+        <FrameLayout
+            android:id="@+id/logoContainer"
+            android:layout_width="126dp"
+            android:layout_height="126dp"
+            android:background="@drawable/bg_onboarding_logo_badge"
+            android:elevation="8dp">
+
+            <ImageView
+                android:id="@+id/splashLogo"
+                android:layout_width="82dp"
+                android:layout_height="82dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_maternity_health" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/appName"
+            style="@style/TextAppearance.MamaCarePlus.Display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/tagline"
+            style="@style/TextAppearance.MamaCarePlus.Body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/onboarding_splash_tagline"
+            android:textSize="14sp" />
+    </LinearLayout>
+</FrameLayout>

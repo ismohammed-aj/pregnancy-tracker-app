@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="720" viewBox="0 0 720 720" role="img" aria-label="early seed baby development illustration">
+  <rect width="720" height="720" rx="72" fill="#EAFBF8"/>
+  <circle cx="116" cy="124" r="72" fill="#FFFFFF" opacity="0.58"/>
+  <circle cx="604" cy="164" r="92" fill="#CFF3ED" opacity="0.45"/>
+  <circle cx="592" cy="588" r="98" fill="#FFFFFF" opacity="0.48"/>
+  <circle cx="360" cy="360" r="206" fill="#FFFFFF" opacity="0.54"/>
+  <circle cx="360" cy="355" r="86" fill="#23B8AE"/>
+  <path d="M316 350 C320 302, 356 268, 398 286 C438 304, 440 362, 398 398 C356 434, 312 400, 316 350Z" fill="#ffffff" opacity="0.92"/>
+  <path d="M358 316 C382 314, 402 330, 408 352" fill="none" stroke="#23B8AE" stroke-width="18" stroke-linecap="round"/>
+</svg>

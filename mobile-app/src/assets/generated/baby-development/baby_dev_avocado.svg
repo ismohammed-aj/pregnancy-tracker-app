@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="720" viewBox="0 0 720 720" role="img" aria-label="avocado baby development illustration">
+  <rect width="720" height="720" rx="72" fill="#F0FBF7"/>
+  <circle cx="116" cy="124" r="72" fill="#FFFFFF" opacity="0.58"/>
+  <circle cx="604" cy="164" r="92" fill="#D6F4DD" opacity="0.45"/>
+  <circle cx="592" cy="588" r="98" fill="#FFFFFF" opacity="0.48"/>
+  <circle cx="360" cy="360" r="206" fill="#FFFFFF" opacity="0.54"/>
+  <path d="M360 160 C470 192, 520 300, 478 426 C440 540, 286 548, 238 432 C190 316, 248 188, 360 160Z" fill="#42B883"/>
+  <path d="M360 204 C430 226, 464 304, 434 402 C408 486, 304 492, 276 406 C244 308, 292 226, 360 204Z" fill="#EAF8DB"/>
+  <circle cx="360" cy="382" r="52" fill="#C98F50"/>
+</svg>

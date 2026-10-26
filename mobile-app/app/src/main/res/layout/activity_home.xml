@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:paddingBottom="88dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_home_header"
+                android:orientation="vertical"
+                android:paddingStart="22dp"
+                android:paddingTop="28dp"
+                android:paddingEnd="22dp"
+                android:paddingBottom="22dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/ivHomeAvatar"
+                        android:layout_width="54dp"
+                        android:layout_height="54dp"
+                        android:background="@drawable/bg_avatar_circle"
+                        android:contentDescription="@string/app_name"
+                        android:padding="12dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_profile_24"
+                        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay_MamaCarePlus_Circle"
+                        app:tint="@color/primary_dark" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvHomeGreeting"
+                            style="@style/TextAppearance.MamaCarePlus.Display"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Bonjour" />
+
+                        <TextView
+                            android:id="@+id/tvHomeWelcomeSubtitle"
+                            style="@style/TextAppearance.MamaCarePlus.Body"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Votre suivi de grossesse" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/cardPregnancyOverview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_pregnancy_card"
+                    android:elevation="3dp"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/tvPregnancyCardLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="Grossesse"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvPregnancyWeek"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:includeFontPadding="false"
+                        android:text="Semaine non definie"
+                        android:textColor="@color/white"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvPregnancyProgress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:text="Completez votre profil pour synchroniser le suivi."
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                    <ProgressBar
+                        android:id="@+id/progressPregnancy"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:layout_marginTop="16dp"
+                        android:max="100"
+                        android:progress="0"
+                        android:progressTint="@color/white"
+                        android:progressBackgroundTint="#55FFFFFF" />
+
+                    <TextView
+                        android:id="@+id/tvPregnancyDays"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Aucune date prevue"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="22dp"
+                android:paddingTop="22dp"
+                android:paddingEnd="22dp">
+
+                <LinearLayout
+                    android:id="@+id/healthCardsRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/cardHomeTasks"
+                        android:layout_width="0dp"
+                        android:layout_height="122dp"
+                        android:layout_marginEnd="6dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_health_card_pink"
+                        android:clickable="true"
+                        android:elevation="2dp"
+                        android:focusable="true"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+                        <ImageView
+                            android:layout_width="34dp"
+                            android:layout_height="34dp"
+                            android:background="@drawable/bg_circle_icon"
+                            android:contentDescription="@null"
+                            android:padding="8dp"
+                            android:src="@drawable/ic_task_24"
+                            app:tint="@color/primary_dark" />
+
+                        <TextView
+                            android:id="@+id/tvHomeTasksValue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:includeFontPadding="false"
+                            android:text="0"
+                            android:textColor="@color/dark_text"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvHomeTasksLabel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Mes taches"
+                            android:textColor="@color/secondary_text"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/cardHomeAppointment"
+                        android:layout_width="0dp"
+                        android:layout_height="122dp"
+                        android:layout_marginStart="6dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_health_card_mint"
+                        android:clickable="true"
+                        android:elevation="2dp"
+                        android:focusable="true"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+                        <ImageView
+                            android:layout_width="34dp"
+                            android:layout_height="34dp"
+                            android:background="@drawable/bg_circle_icon"
+                            android:contentDescription="@null"
+                            android:padding="8dp"
+                            android:src="@drawable/ic_calendar_24"
+                            app:tint="@color/appointment_turquoise_dark" />
+
+                        <TextView
+                            android:id="@+id/tvHomeAppointmentValue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:ellipsize="end"
+                            android:includeFontPadding="false"
+                            android:maxLines="1"
+                            android:text="Aucun rendez-vous"
+                            android:textColor="@color/dark_text"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvHomeAppointmentLabel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="Prochain rendez-vous"
+                            android:textColor="@color/secondary_text"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    style="@style/TextAppearance.MamaCarePlus.SectionTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="Developpement bebe" />
+
+                <LinearLayout
+                    android:id="@+id/cardBabyDevelopment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_dashboard_card"
+                    android:clickable="true"
+                    android:elevation="2dp"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/ivBabyDevelopment"
+                        android:layout_width="88dp"
+                        android:layout_height="88dp"
+                        android:contentDescription="@null"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/baby_development_placeholder" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvBabyDevelopmentTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="Semaine non definie"
+                            android:textColor="@color/dark_text"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvBabyDevelopmentSubtitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="Completez votre profil pour voir le developpement."
+                            android:textColor="@color/secondary_text"
+                            android:textSize="12.5sp" />
+
+                        <TextView
+                            android:id="@+id/tvBabyDevelopmentMeta"
+                            style="@style/TextAppearance.MamaCarePlus.Label"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                        android:text="Voir les details" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/homeArticleSections"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

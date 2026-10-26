@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="22dp"
+    android:paddingTop="18dp"
+    android:paddingEnd="22dp"
+    android:paddingBottom="28dp">
+
+    <View
+        android:layout_width="42dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/bg_avatar_sheet_handle" />
+
+    <TextView
+        style="@style/TextAppearance.MamaCarePlus.SectionTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Photo de profil" />
+
+    <TextView
+        style="@style/TextAppearance.MamaCarePlus.Body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="Prenez une nouvelle photo ou choisissez-en une dans votre galerie." />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnTakePhotoOption"
+        style="@style/Widget.MamaCarePlus.Button.Outline"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="18dp"
+        android:gravity="center_vertical"
+        android:text="Prendre une photo"
+        android:textColor="#2F2430"
+        app:icon="@drawable/ic_camera_24"
+        app:iconGravity="textStart"
+        app:iconPadding="12dp"
+        app:iconTint="#16B8C7"
+        app:strokeColor="#F2E0E8" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnChooseGalleryOption"
+        style="@style/Widget.MamaCarePlus.Button.Outline"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:text="Choisir depuis la galerie"
+        android:textColor="#2F2430"
+        app:icon="@drawable/ic_gallery_24"
+        app:iconGravity="textStart"
+        app:iconPadding="12dp"
+        app:iconTint="#16B8C7"
+        app:strokeColor="#F2E0E8" />
+</LinearLayout>

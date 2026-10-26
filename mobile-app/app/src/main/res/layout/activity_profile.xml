@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:clipToPadding="false"
+    android:fillViewport="true"
+    android:overScrollMode="never">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingTop="28dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="34dp">
+
+        <TextView
+            android:id="@+id/tvProfileTitle"
+            style="@style/TextAppearance.MamaCarePlus.Display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Profil" />
+
+        <TextView
+            android:id="@+id/tvProfileSubtitle"
+            style="@style/TextAppearance.MamaCarePlus.Body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Votre compte, votre grossesse et les paramètres de l'application." />
+
+        <LinearLayout
+            android:id="@+id/cardProfileHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/bg_profile_header"
+            android:elevation="5dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="22dp">
+
+            <FrameLayout
+                android:id="@+id/avatarContainer"
+                android:layout_width="116dp"
+                android:layout_height="116dp"
+                android:background="@drawable/bg_avatar_circle"
+                android:clickable="true"
+                android:elevation="3dp"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivProfileAvatar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="Photo de profil"
+                    android:padding="26dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_profile_24"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay_MamaCarePlus_Circle"
+                    app:strokeColor="#FFFFFF"
+                    app:strokeWidth="2dp"
+                    app:tint="#16B8C7" />
+
+                <ImageButton
+                    android:id="@+id/btnAvatarCameraOverlay"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="bottom|end"
+                    android:background="@drawable/bg_avatar_camera_overlay"
+                    android:contentDescription="Changer la photo de profil"
+                    android:padding="8dp"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_camera_24"
+                    app:tint="#FFFFFF" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tvUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="MamaCare"
+                android:textColor="#24333A"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:gravity="center"
+                android:text="email@example.com"
+                android:textColor="#75868D"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvProfilePregnancyStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/bg_chip_soft"
+                android:gravity="center"
+                android:paddingStart="14dp"
+                android:paddingTop="7dp"
+                android:paddingEnd="14dp"
+                android:paddingBottom="7dp"
+                android:text="Chargement du statut de grossesse"
+                android:textColor="#16B8C7"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPickAvatar"
+                style="@style/Widget.MamaCarePlus.Button.Outline"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:layout_marginTop="16dp"
+                android:minWidth="0dp"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+                android:text="Changer la photo"
+                android:textColor="#16B8C7"
+                app:icon="@drawable/ic_gallery_24"
+                app:iconGravity="textStart"
+                app:iconPadding="8dp"
+                app:iconTint="#16B8C7"
+                app:strokeColor="#CFEFF2" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/TextAppearance.MamaCarePlus.SectionTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Vue d'ensemble" />
+
+        <LinearLayout
+            android:id="@+id/cardPersonalInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_profile_card"
+            android:elevation="3dp"
+            android:gravity="center_vertical"
+            android:minHeight="78dp"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <FrameLayout
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:background="@drawable/bg_profile_icon_soft">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_person_24"
+                    app:tint="#16B8C7" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Informations personnelles"
+                    android:textColor="#24333A"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvPersonalInfoValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Nom et date de naissance"
+                    android:textColor="#75868D"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_chevron_right_24"
+                app:tint="#9BB7BC" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cardPregnancyInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_profile_card"
+            android:elevation="3dp"
+            android:gravity="center_vertical"
+            android:minHeight="78dp"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <FrameLayout
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:background="@drawable/bg_profile_icon_soft">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baby_24"
+                    app:tint="#16B8C7" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Informations grossesse"
+                    android:textColor="#24333A"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvPregnancyInfoValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Semaine et date prévue"
+                    android:textColor="#75868D"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_chevron_right_24"
+                app:tint="#9BB7BC" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cardHealthInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_profile_card"
+            android:elevation="3dp"
+            android:gravity="center_vertical"
+            android:minHeight="78dp"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <FrameLayout
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:background="@drawable/bg_profile_icon_soft">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_health_heart_24"
+                    app:tint="#16B8C7" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Informations santé"
+                    android:textColor="#24333A"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvHealthInfoValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Statut de risque et notes"
+                    android:textColor="#75868D"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_chevron_right_24"
+                app:tint="#9BB7BC" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cardSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_profile_card"
+            android:elevation="3dp"
+            android:gravity="center_vertical"
+            android:minHeight="78dp"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <FrameLayout
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:background="@drawable/bg_profile_icon_soft">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_tracking_chart_24"
+                    app:tint="#16B8C7" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Paramètres"
+                    android:textColor="#24333A"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvSettingsInfoValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Animations et préférences du compte"
+                    android:textColor="#75868D"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_chevron_right_24"
+                app:tint="#9BB7BC" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cardEditProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/bg_profile_card"
+            android:elevation="3dp"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                style="@style/TextAppearance.MamaCarePlus.SectionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Modifier le profil" />
+
+            <TextView
+                style="@style/TextAppearance.MamaCarePlus.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Modifiez votre nom, votre date de naissance et votre photo." />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilProfileName"
+                style="@style/Widget.MamaCarePlus.TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:hint="Nom complet"
+                app:boxStrokeColor="#16B8C7"
+                app:startIconDrawable="@drawable/ic_person_24"
+                app:startIconTint="#16B8C7">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etProfileName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName|textCapWords"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilProfileBirthDate"
+                style="@style/Widget.MamaCarePlus.TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:hint="Date de naissance (AAAA-MM-JJ)"
+                app:boxStrokeColor="#16B8C7"
+                app:endIconDrawable="@drawable/ic_calendar_24"
+                app:endIconMode="custom"
+                app:endIconTint="#16B8C7"
+                app:startIconDrawable="@drawable/ic_calendar_24"
+                app:startIconTint="#16B8C7">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etProfileBirthDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="date"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvBirthDate"
+                style="@style/TextAppearance.MamaCarePlus.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Date de naissance non définie" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSaveProfile"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="18dp"
+                android:backgroundTint="#16B8C7"
+                android:text="Enregistrer"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                app:cornerRadius="16dp"
+                app:icon="@drawable/ic_check_circle_24"
+                app:iconGravity="textStart"
+                app:iconPadding="8dp"
+                app:iconTint="#FFFFFF" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cardActions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_profile_card"
+            android:elevation="3dp"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                style="@style/TextAppearance.MamaCarePlus.SectionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Actions" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEditProfileAction"
+                style="@style/Widget.MamaCarePlus.Button.Outline"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginTop="14dp"
+                android:text="Modifier le profil"
+                android:textColor="#16B8C7"
+                app:icon="@drawable/ic_profile_24"
+                app:iconGravity="textStart"
+                app:iconTint="#16B8C7"
+                app:strokeColor="#CFEFF2" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnChangePassword"
+                style="@style/Widget.MamaCarePlus.Button.Outline"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginTop="10dp"
+                android:text="Modifier le mot de passe"
+                android:textColor="#16B8C7"
+                app:icon="@drawable/ic_lock_24"
+                app:iconGravity="textStart"
+                app:iconTint="#16B8C7"
+                app:strokeColor="#CFEFF2" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnUpdatePregnancy"
+                style="@style/Widget.MamaCarePlus.Button.Outline"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginTop="10dp"
+                android:text="Modifier le profil de grossesse"
+                android:textColor="#16B8C7"
+                app:icon="@drawable/ic_baby_24"
+                app:iconGravity="textStart"
+                app:iconTint="#16B8C7"
+                app:strokeColor="#CFEFF2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cardProfileSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_profile_card"
+            android:elevation="3dp"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                style="@style/TextAppearance.MamaCarePlus.SectionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Paramètres" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchBackgroundAnimation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Fond animé"
+                android:textColor="#24333A"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvProfileMessage"
+            style="@style/TextAppearance.MamaCarePlus.Label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="18dp"
+            android:backgroundTint="#FFF0F0"
+            android:text="Déconnexion"
+            android:textAllCaps="false"
+            android:textColor="#D64545"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:cornerRadius="18dp"
+            app:icon="@drawable/ic_warning_red_24"
+            app:iconGravity="textStart"
+            app:iconPadding="8dp"
+            app:iconTint="#D64545"
+            app:strokeColor="#FFD6D6"
+            app:strokeWidth="1dp" />
+    </LinearLayout>
+</ScrollView>
